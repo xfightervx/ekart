@@ -5,9 +5,9 @@
     <p>Color : {{product.color}}</p>
     <p>Discounted Price : {{'$'+getDiscountedPrice( )}}</p>
     <p>{{product.instock > 0 ? "only " + product.instock + " items left" :"Not available in stock"}}</p>
-    <button (click)="Sub()">-</button>
+    <button [disabled]="addToCart==0" (click)="Sub()">-</button>
     <span>{{addToCart}}</span>
-    <button (click)="Add()">+</button>
+    <button (click)="Add()" [disabled]="addToCart==product.instock">+</button>
     <!-- <input (input)="OnNameChange($event)"><br>
     <p>name = {{name}}</p> -->
 </div>
