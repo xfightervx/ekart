@@ -1,0 +1,13 @@
+<div class="ekart-product--container">
+    <img [src]="product.pImage">
+    <p>Name : {{product.name}}</p>
+    <p>Price : {{'$'+product.price}}</p>
+    <p>Color : {{product.color}}</p>
+    <p>Discounted Price : {{'$'+getDiscountedPrice( )}}</p>
+    <p>{{product.instock > 0 ? "only " + product.instock + " items left" :"Not available in stock"}}</p>
+    <button (click)="Sub()">-</button>
+    <span>{{addToCart}}</span>
+    <button (click)="Add()">+</button>
+    <!-- <input (input)="OnNameChange($event)"><br>
+    <p>name = {{name}}</p> -->
+</div>
