@@ -1,5 +1,5 @@
 <div class="ekart-product--container">
-    <img [src]="product.pImage">
+    <!-- <img [src]="product.pImage">
     <p>Name : {{product.name}}</p>
     <p>Price : {{'$'+product.price}}</p>
     <p>Color : {{product.color}}</p>
@@ -7,7 +7,12 @@
     <p>{{product.instock > 0 ? "only " + product.instock + " items left" :"Not available in stock"}}</p>
     <button [disabled]="addToCart==0" (click)="Sub()">-</button>
     <span>{{addToCart}}</span>
-    <button (click)="Add()" [disabled]="addToCart==product.instock">+</button>
+    <button (click)="Add()" [disabled]="addToCart==product.instock">+</button> -->
     <!-- <input (input)="OnNameChange($event)"><br>
     <p>name = {{name}}</p> -->
+    <app-search></app-search>
+    <product-list></product-list>
+    <!-- <div *ngFor="let item of ListOfString">
+        <p>Current item in item{{ item }}</p>
+    </div> -->
 </div>
