@@ -10,7 +10,7 @@
     <button (click)="Add()" [disabled]="addToCart==product.instock">+</button> -->
     <!-- <input (input)="OnNameChange($event)"><br>
     <p>name = {{name}}</p> -->
-    <app-search></app-search>
+    <app-search (onSearchTextChange)="setSearch($event)"></app-search>
     <product-list></product-list>
     <!-- <div *ngFor="let item of ListOfString">
         <p>Current item in item{{ item }}</p>
