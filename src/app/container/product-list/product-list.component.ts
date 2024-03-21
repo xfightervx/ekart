@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from '../../models/Product';
 
 @Component({
   selector: 'product-list',
@@ -534,8 +535,13 @@ export class ProductListComponent {
   ];
   totalProdCount = this.products.length;
   totalInStock = this.products.filter( p  => p.is_in_inventory ===true).length; 
+  @Input()
+  searchText: string = '';
+
+  selectedProduct : Product;
   selectedFilter :string = 'all';
   onFilterChange(value : string){
     this.selectedFilter = value;
   }
+
 }

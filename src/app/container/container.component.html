@@ -11,7 +11,8 @@
     <!-- <input (input)="OnNameChange($event)"><br>
     <p>name = {{name}}</p> -->
     <app-search (onSearchTextChange)="setSearch($event)"></app-search>
-    <product-list></product-list>
+    <product-list [searchText]="searchText" #productlistref></product-list>
+    <product-detail *ngIf="productlistref.selectedProduct"></product-detail>
     <!-- <div *ngFor="let item of ListOfString">
         <p>Current item in item{{ item }}</p>
     </div> -->
